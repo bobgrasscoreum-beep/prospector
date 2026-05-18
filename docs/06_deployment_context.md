@@ -20,9 +20,19 @@
 
 ## Deployment Model
 
-Prospector runs locally on the server PC. It is not deployed to any cloud service. It does not require an internet-facing server. It runs when triggered and stops when done.
+Prospector runs locally on the server PC (Ubuntu 24.04). It is not deployed to any cloud service. It does not require an internet-facing server. It runs when triggered and stops when done.
 
-**V1 execution:** Manual trigger via `pipeline.py` on the command line
+**Source repository:** https://github.com/bobgrasscoreum-beep/prospector
+
+Clone on the server:
+
+```bash
+cd ~
+git clone https://github.com/bobgrasscoreum-beep/prospector.git prospector
+cd ~/prospector
+```
+
+**V1 execution:** Manual trigger via `pipeline.py` on the command line  
 **Future:** Scheduled execution, possible local web trigger
 
 ---
@@ -30,7 +40,7 @@ Prospector runs locally on the server PC. It is not deployed to any cloud servic
 ## How to Run (V1)
 
 ```bash
-cd /path/to/prospector
+cd ~/prospector
 source venv/bin/activate
 
 python pipeline.py --profile test_run
@@ -61,7 +71,7 @@ Entry point is **`pipeline.py`** only (not `prospector.py`).
 sudo apt update
 sudo apt install -y python3.12 python3.12-venv
 
-cd /path/to/prospector
+cd ~/prospector
 python3.12 -m venv venv
 source venv/bin/activate
 
@@ -111,8 +121,8 @@ API keys (V2 BYOK) go in `.env` — never committed (see `.gitignore`).
 
 ## Accessing Output
 
-CSV files: `prospector/output/`
-Logs: `prospector/logs/`
+CSV files: `~/prospector/output/`
+Logs: `~/prospector/logs/`
 
 From the main PC:
 - SSH/SFTP
