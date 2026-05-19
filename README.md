@@ -7,7 +7,7 @@ Modular, self-hosted lead generation pipeline. V1 finds businesses on Google Map
 ## Quick start
 
 ```bash
-cd /path/to/prospector
+cd ~/prospector
 
 python3.12 -m venv venv
 source venv/bin/activate   # Linux / macOS
@@ -67,6 +67,8 @@ API keys for V2 belong in `.env` only — never commit them.
 ## Documentation
 
 See [`docs/`](docs/) for architecture, profiles, output spec, deployment, and policies.
+
+**Repository:** https://github.com/bobgrasscoreum-beep/prospector
 
 ## Implementation status (V1)
 
